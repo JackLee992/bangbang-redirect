@@ -1,0 +1,28 @@
+{
+  "version": "0.1.3",
+  "tag": "v0.1.3",
+  "sourceCommit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+  "android": {
+    "filename": "bangbang-0.1.3-arm.apk",
+    "bytes": 49169392,
+    "sha256": "628c6183febae70f0a8159e86caef7a80f37d6b7d2b0a48cbab267ddeb1a9af6",
+    "downloadUrl": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.3/bangbang-0.1.3-arm.apk",
+    "minVersion": "7.0",
+    "architectures": [
+      "armeabi-v7a",
+      "arm64-v8a"
+    ]
+  },
+  "source": {
+    "filename": "bangbang-0.1.3-source.zip",
+    "bytes": 14249404,
+    "sha256": "b0b2e3736bf5534b7f19188a25881407e537d956f1c45589487fb6fa653c2964"
+  },
+  "buildInfoSha256": "801074b39b4080cb7e983f2654f85a39cdb016f61e91479e6cdb928dfb36dd8b",
+  "ios": {
+    "status": "pending",
+    "appStoreUrl": null
+  },
+  "buildNumber": 18,
+  "channel": "preview"
+}

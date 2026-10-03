@@ -4,46 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="robots" content="noindex">
-  <title>打开帮帮</title>
+  <title>隐私说明 · 帮帮</title>
   <style>
-    :root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#faf7f2;color:#392c29}
-    body{margin:0;min-height:100vh;display:grid;place-items:center}
-    main{padding:32px 24px;text-align:center;max-width:400px}
-    h1{font-size:28px;font-weight:600;line-height:1.4;margin:0 0 16px}
-    p{font-size:20px;line-height:1.6;color:#70615d;margin:0 0 28px}
-    a{display:inline-block;font-size:22px;line-height:1.4;padding:16px 36px;border-radius:16px;background:#b64132;color:white;text-decoration:none;font-weight:600}
-    a:focus-visible{outline:3px solid #392c29;outline-offset:5px}
+    :root{color-scheme:light dark}body{max-width:42rem;margin:auto;padding:2rem 1.25rem;font:18px/1.8 system-ui,sans-serif;color:#433b35;background:#fffaf4}h1{font-size:2rem}h2{font-size:1.3rem;margin-top:2rem}a{color:#9b4e26}footer{margin-top:3rem;color:#75675d}@media(prefers-color-scheme:dark){body{background:#201d1a;color:#f5eee5}a{color:#efb690}}
   </style>
 </head>
 <body>
-  <main>
-    <h1>正在打开帮帮</h1>
-    <p>如果没有自动打开，点下面的按钮。</p>
-    <a id="open" href="https://bangbang-download.s419505080.chatgpt.site/">打开帮帮</a>
-    <noscript><p>需要开启浏览器的 JavaScript，才能把连接口令一同带过去。</p></noscript>
-  </main>
-  <script>
-    function redirectDestination(input) {
-  const source = new URL(input);
-  const destination = new URL("https://bangbang-download.s419505080.chatgpt.site/");
-  let path = source.pathname;
-  const projectPath = "/bangbang-redirect";
-  if (source.hostname === "jacklee992.github.io") {
-    if (path === projectPath) path = "/";
-    else if (path.startsWith(projectPath + "/")) path = path.slice(projectPath.length);
-  }
-  const pages = { "/invite": "/invite.html", "/help": "/help.html", "/privacy": "/privacy.html" };
-  const page = path.replace(/\/$/, "");
-  if (Object.prototype.hasOwnProperty.call(pages, page)) path = pages[page];
-  destination.pathname = path || "/";
-  destination.search = source.search;
-  destination.hash = source.hash;
-  return destination.href;
-}
-    const destination = redirectDestination(window.location.href);
-    document.getElementById("open").href = destination;
-    window.location.replace(destination);
-  </script>
+  <a href="/">← 帮帮</a>
+  <h1>隐私说明</h1>
+  <p>更新日期：2026 年 10 月 3 日</p>
+  <p>帮帮用于家人之间的远程手机协助。使用时无需注册账号或提供手机号。</p>
+  <h2>协助与权限</h2>
+  <p>安卓手机在你开启权限、同意屏幕共享并允许家人协助后，才向对方提供画面和远程操作。点击“结束协助”可停止共享。iOS 版只作为帮助家人的控制端。连接服务处理建立连接所需的设备号码、网络地址和加密通信数据；画面可能通过中转服务器传输。</p>
+  <h2>邀请与家人记录</h2>
+  <p>应用会在打开或返回时尝试识别剪贴板中的帮帮邀请，系统可能提示粘贴许可。识别后仍需你确认连接，不会把剪贴板全文作为统计日志上传。分享内容由你通过系统分享发送给选定的人。</p>
+  <p>双方完成协助后，可在本机保存家人称呼和连接记录。再次求助时，家人请求服务保存安装身份的验证摘要、家人关系和短期求助状态，以便对方收到并回应。你可以在“家人”中重命名或移除家人；移除会请求撤销后续求助关系。撤销后，服务端仍保留防止旧邀请和旧请求再次生效所需的验证记录；这些记录不适用下述诊断的7天保留期，需要进一步清理时可通过项目反馈页联系开发者。</p>
+  <h2>通知与诊断</h2>
+  <p>开启来电提醒后，系统可显示已收到的家人请求并播放提示音，是否显示和响铃遵循手机设置。后台推送尚未配置的版本，需要双方打开帮帮才能收到新的求助。</p>
+  <p>连接诊断在手机本地最多保存 100 条、7 天，包含随机呼叫编号、版本、平台、连接阶段、耗时和错误分类。它不包含屏幕内容、邀请口令、家人称呼、设备号码或原始剪贴板。接入新服务的版本会发送这些固定诊断信息，用于统计连接失败和首帧耗时；可在“更多 → 连接诊断”关闭发送。服务端对安装与呼叫编号进行散列处理，统计只使用近 7 天记录，上传时分批清理过期记录；服务停止使用期间，需要管理员执行清理。</p>
+  <p>新版家人请求与脱敏诊断由独立的 ChatGPT Sites 服务托管，下载站与服务站分别发布。诊断统计需要后台授权才能查看，不会公开展示家人关系或个人连接记录。</p>
+  <p>0.1.2 测试版另在本机保存最近一次协助的最多60段画面性能记录，包括帧率、画面尺寸、编码、网络质量和画面交付耗时，不包含画面像素、设备号码或邀请码，也不自动上传。你主动复制诊断报告时，这些数值会随报告复制到剪贴板。</p>
+  <p>当前版本没有接入友盟、Bugly 或个推 SDK。新增第三方服务时会更新本说明及相应授权设置。</p>
+  <h2>联系</h2>
+  <p>可通过<a href="https://github.com/JackLee992/bangbang-android/issues">项目反馈页</a>联系开发者。公开反馈中不要粘贴邀请码、密码或私人画面。</p>
+  <footer>帮帮 · 家人之间的手机协助</footer>
 </body>
 </html>

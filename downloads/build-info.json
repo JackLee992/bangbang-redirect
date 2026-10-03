@@ -1,0 +1,193 @@
+{
+  "app": "帮帮",
+  "version": "0.1.3",
+  "build_number": "18",
+  "channel": "preview",
+  "build_commit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+  "release_commit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+  "build_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37089840907",
+  "verification_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37097853972",
+  "verification_harness_commit": "353bb2acd4eb257ab9ccd2968045114f789489ea",
+  "release_architectures": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "validation_architecture": "x86_64 (CI only, same build run and sources)",
+  "signing_certificate_sha256": "af793353035d26390f3f4c577194576f50d613e9fdf1144f43e05eecdb95da83",
+  "apk_sha256": "628c6183febae70f0a8159e86caef7a80f37d6b7d2b0a48cbab267ddeb1a9af6",
+  "verification": {
+    "result": "passed",
+    "build_run": "37089840907",
+    "apk_sha256": "b1a85c252146cecfdeb4d152898ee34dd9351221075aacddd29b83be9bafa5a2",
+    "platform_notices": {
+      "emulator-5556": [
+        "Quickstep isn't responding"
+      ]
+    },
+    "devices": "Two Android 35 x86_64 emulators on one GitHub runner",
+    "network": "Default RustDesk public discovery; no custom server configuration",
+    "checks": [
+      "default elder mode",
+      "local authorization",
+      "encoded invitation opens helper confirmation",
+      "public ID connection",
+      "incoming approval",
+      "live video",
+      "remote touch changes elder UI",
+      "video updates after touch",
+      "elder revocation releases MediaProjection"
+    ],
+    "limits": "Not a physical-device or different-mobile-carrier test"
+  },
+  "native_delivery": {
+    "source_commit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+    "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+    "source_files": 509,
+    "manifest_sha256": "90dae0df210d200dd25e266605e23f9dd68ab2e2a2d7776626048e4aad44beab",
+    "manifest_in_corresponding_source": "release-provenance/native/native-manifest.json",
+    "abis": {
+      "arm64-v8a": {
+        "manifest": "release-provenance/native/delivery/arm64-v8a/manifest.json",
+        "manifest_sha256": "fb9a80d84fbb10687e38ccb6b0ee286db57472963794a2a4d50d3d37e6f4a896",
+        "libraries": {
+          "libc++_shared.so": {
+            "bytes": 1253544,
+            "elf": {
+              "bits": 64,
+              "endianness": "little",
+              "machine": 183,
+              "type": "DYN"
+            },
+            "sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c"
+          },
+          "librustdesk.so": {
+            "bytes": 31329672,
+            "elf": {
+              "bits": 64,
+              "endianness": "little",
+              "machine": 183,
+              "type": "DYN"
+            },
+            "sha256": "99ac6c073ab1eec968aa6313836fd0bbaf49675e43d08cfbe36d1a5288918c12"
+          }
+        }
+      },
+      "armeabi-v7a": {
+        "manifest": "release-provenance/native/delivery/armeabi-v7a/manifest.json",
+        "manifest_sha256": "de0c29c9d3d0b8149c55a8450a6e296ef2830487a69f1e7d22782133f068290d",
+        "libraries": {
+          "libc++_shared.so": {
+            "bytes": 850380,
+            "elf": {
+              "bits": 32,
+              "endianness": "little",
+              "machine": 40,
+              "type": "DYN"
+            },
+            "sha256": "e7e20f6e0f3f181e853cea50373ecee2ccfe95c668dce72d0999b2469c92d0e1"
+          },
+          "librustdesk.so": {
+            "bytes": 24578972,
+            "elf": {
+              "bits": 32,
+              "endianness": "little",
+              "machine": 40,
+              "type": "DYN"
+            },
+            "sha256": "fe861f860279c59105f047328690d80467c64065a2e79dc15282a96f71aabd47"
+          }
+        }
+      },
+      "x86_64": {
+        "manifest": "release-provenance/native/delivery/x86_64/manifest.json",
+        "manifest_sha256": "a659dc022ab298eeb1a4c39b5cf79473af47c3f93b14121174bc36894bc17ec3",
+        "libraries": {
+          "libc++_shared.so": {
+            "bytes": 1229808,
+            "elf": {
+              "bits": 64,
+              "endianness": "little",
+              "machine": 62,
+              "type": "DYN"
+            },
+            "sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256"
+          },
+          "librustdesk.so": {
+            "bytes": 37565024,
+            "elf": {
+              "bits": 64,
+              "endianness": "little",
+              "machine": 62,
+              "type": "DYN"
+            },
+            "sha256": "c3c60c60b1cc99b39a0d6c05c292538b077e1834011e18bd48cb3094db3fdd7f"
+          }
+        }
+      }
+    },
+    "toolchain": {
+      "android_api": 24,
+      "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+      "clang": "Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)",
+      "features": [
+        "flutter",
+        "hwcodec"
+      ],
+      "ndk_version": "28.2.13676358",
+      "rust_version": "1.98.1",
+      "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "vcpkg_baseline": "120deac3062162151622ca4860575a33844ba10b",
+      "vcpkg_binary_sha256": "2a27e9af93da5b33e798bc01aa502182a82fc2ad9736fc3e98096cb7b3ebc420"
+    },
+    "release_apk": {
+      "schema_version": 1,
+      "passed": true,
+      "apk_sha256": "628c6183febae70f0a8159e86caef7a80f37d6b7d2b0a48cbab267ddeb1a9af6",
+      "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+      "libraries": {
+        "arm64-v8a": {
+          "librustdesk.so": "99ac6c073ab1eec968aa6313836fd0bbaf49675e43d08cfbe36d1a5288918c12",
+          "libc++_shared.so": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c"
+        },
+        "armeabi-v7a": {
+          "librustdesk.so": "fe861f860279c59105f047328690d80467c64065a2e79dc15282a96f71aabd47",
+          "libc++_shared.so": "e7e20f6e0f3f181e853cea50373ecee2ccfe95c668dce72d0999b2469c92d0e1"
+        }
+      },
+      "limitation": "Integrity gate only; signing, Android loading and session QA are separate gates."
+    },
+    "validation_apk": {
+      "schema_version": 1,
+      "passed": true,
+      "apk_sha256": "b1a85c252146cecfdeb4d152898ee34dd9351221075aacddd29b83be9bafa5a2",
+      "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+      "libraries": {
+        "x86_64": {
+          "librustdesk.so": "c3c60c60b1cc99b39a0d6c05c292538b077e1834011e18bd48cb3094db3fdd7f",
+          "libc++_shared.so": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256"
+        }
+      },
+      "limitation": "Integrity gate only; signing, Android loading and session QA are separate gates."
+    }
+  },
+  "push_configuration": {
+    "mode": "none",
+    "configSha256": "",
+    "deliveryVerified": false
+  },
+  "source_bundle": {
+    "git_commit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+    "submodule_commit": "7e1c392c62d39c364127307cd408421dd5f8cfb0",
+    "origins": "release-provenance/SOURCE_ORIGINS.json",
+    "licenses": [
+      "LICENCE",
+      "libs/enigo/LICENSE",
+      "release-provenance/licenses/"
+    ]
+  },
+  "limitations": [
+    "Controlled complete E2E on two Android 35 x86_64 emulators on one GitHub runner.",
+    "iPhone to Android, physical devices, cross-carrier networks and production background push remain unverified.",
+    "The original build run and earlier recheck device failures are historical results; the separate same-APK verification run above passed."
+  ]
+}

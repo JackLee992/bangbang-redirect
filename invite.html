@@ -2,48 +2,45 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>家人发来的帮帮邀请</title>
+  <meta name="description" content="复制家人的帮帮邀请，再打开帮帮，点一下连接家人。">
+  <meta property="og:title" content="家人发来的帮帮邀请">
+  <meta property="og:description" content="把邀请消息整个复制下来，再打开帮帮，点一下连接家人。">
+  <meta property="og:image" content="https://bangbang.yilin.fun/assets/brand.png">
   <meta name="robots" content="noindex">
-  <title>打开帮帮</title>
-  <style>
-    :root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#faf7f2;color:#392c29}
-    body{margin:0;min-height:100vh;display:grid;place-items:center}
-    main{padding:32px 24px;text-align:center;max-width:400px}
-    h1{font-size:28px;font-weight:600;line-height:1.4;margin:0 0 16px}
-    p{font-size:20px;line-height:1.6;color:#70615d;margin:0 0 28px}
-    a{display:inline-block;font-size:22px;line-height:1.4;padding:16px 36px;border-radius:16px;background:#b64132;color:white;text-decoration:none;font-weight:600}
-    a:focus-visible{outline:3px solid #392c29;outline-offset:5px}
-  </style>
+  <link rel="icon" href="/assets/brand.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/invite.js" type="module"></script>
 </head>
 <body>
-  <main>
-    <h1>正在打开帮帮</h1>
-    <p>如果没有自动打开，点下面的按钮。</p>
-    <a id="open" href="https://bangbang-download.s419505080.chatgpt.site/">打开帮帮</a>
-    <noscript><p>需要开启浏览器的 JavaScript，才能把连接口令一同带过去。</p></noscript>
+  <header class="site-header container">
+    <a class="brand" href="/" aria-label="帮帮首页"><img src="/assets/brand.png" alt="" width="44" height="44"><span>帮帮</span></a>
+    <a href="/">下载安装</a>
+  </header>
+  <main class="container invite-page">
+    <section id="invite-valid" hidden>
+      <p class="invite-eyebrow">家人发来的邀请</p>
+      <h1>打开帮帮，<br>帮家人看看手机。</h1>
+      <p class="invite-number-label">配对口令</p>
+      <p class="invite-code" id="invite-code"></p>
+      
+      <button class="button button-primary" id="copy-invite" type="button">复制邀请，打开帮帮</button>
+      <p class="invite-instruction">复制后，手动打开「帮帮」，点一下「连接家人」。</p>
+      <p id="invite-status" role="status"></p>
+      <label id="invite-fallback" hidden>长按复制这整条消息：<textarea id="invite-copy-text" readonly rows="11" aria-label="完整帮帮邀请消息"></textarea></label>
+      <p class="invite-links"><a id="open-app">打开帮帮</a><a href="/">还没安装？下载安装</a></p>
+      <aside class="invite-wechat"><strong>微信里打不开？</strong><p>点右上角「…」→「在浏览器中打开」，或复制邀请后回到桌面打开帮帮。</p></aside>
+      <details class="invite-preview"><summary>看看完整邀请消息</summary><pre id="invite-message"></pre></details>
+      <p class="invite-safety">先确认是家人发来的邀请。连接后仍需对方同意，才能开始协助。</p>
+    </section>
+    <section id="invite-invalid" hidden>
+      <h1>这个邀请没打开。</h1>
+      <p>请家人重新分享邀请，再把整条消息复制下来，打开帮帮。</p>
+      <a class="button button-primary" href="/">前往帮帮下载页</a>
+    </section>
+    <noscript><h1>家人的帮帮邀请</h1><p>请在浏览器中打开这个页面并允许 JavaScript，或把家人发来的整条邀请消息复制下来，再手动打开帮帮。</p><a href="/">下载安装帮帮</a></noscript>
   </main>
-  <script>
-    function redirectDestination(input) {
-  const source = new URL(input);
-  const destination = new URL("https://bangbang-download.s419505080.chatgpt.site/");
-  let path = source.pathname;
-  const projectPath = "/bangbang-redirect";
-  if (source.hostname === "jacklee992.github.io") {
-    if (path === projectPath) path = "/";
-    else if (path.startsWith(projectPath + "/")) path = path.slice(projectPath.length);
-  }
-  const pages = { "/invite": "/invite.html", "/help": "/help.html", "/privacy": "/privacy.html" };
-  const page = path.replace(/\/$/, "");
-  if (Object.prototype.hasOwnProperty.call(pages, page)) path = pages[page];
-  destination.pathname = path || "/";
-  destination.search = source.search;
-  destination.hash = source.hash;
-  return destination.href;
-}
-    const destination = redirectDestination(window.location.href);
-    document.getElementById("open").href = destination;
-    window.location.replace(destination);
-  </script>
 </body>
 </html>

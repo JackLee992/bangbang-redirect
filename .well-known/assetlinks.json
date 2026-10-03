@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.jacklee992.qinban",
+      "sha256_cert_fingerprints": [
+        "AF:79:33:53:03:5D:26:39:0F:3F:4C:57:71:94:57:6F:50:D6:13:E9:FD:F1:14:4F:43:E0:5E:EC:DB:95:DA:83"
+      ]
+    }
+  }
+]
