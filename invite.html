@@ -34,7 +34,8 @@
     else if (path.startsWith(projectPath + "/")) path = path.slice(projectPath.length);
   }
   const pages = { "/invite": "/invite.html", "/help": "/help.html", "/privacy": "/privacy.html" };
-  path = pages[path.replace(/\/$/, "")] ?? path;
+  const page = path.replace(/\/$/, "");
+  if (Object.prototype.hasOwnProperty.call(pages, page)) path = pages[page];
   destination.pathname = path || "/";
   destination.search = source.search;
   destination.hash = source.hash;
