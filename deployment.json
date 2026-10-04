@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "7aed9ee1738eecd4edf4674789db6b43e5aed205",
-  "builtAt": "2026-10-04T00:39:27.852Z",
+  "sourceCommit": "148ad47943e5e159b6d60feb78cbdeeb5d796872",
+  "builtAt": "2026-10-04T01:51:08.181Z",
   "appVersion": "0.1.4",
   "releaseSourceCommit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
   "target": "github-pages",
@@ -16,5 +16,5 @@
   },
   "provider": "github-pages",
   "sourceBuildTarget": "sites",
-  "sourceDeploymentSha256": "bbf01d02c27912c7ab6be6d59c65d3df506f05d2941cabc4a67fc614a20cd279"
+  "sourceDeploymentSha256": "49773979f856208c092cf725bf72b00507237a782d92e16d36514aa2400c2304"
 }

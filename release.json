@@ -20,8 +20,11 @@
   },
   "buildInfoSha256": "e254e1cb0c5736884f7848dc9802d5df38577c7573ae08b99c07fa7b0f05ff55",
   "ios": {
-    "status": "pending",
-    "appStoreUrl": null
+    "status": "testflight",
+    "appStoreUrl": null,
+    "testFlightUrl": "https://testflight.apple.com/join/4sw7UNJe",
+    "version": "0.1.2",
+    "buildNumber": 14
   },
   "buildNumber": 20,
   "channel": "preview"
