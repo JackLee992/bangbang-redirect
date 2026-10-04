@@ -1,12 +1,12 @@
 {
-  "version": "0.1.3",
-  "tag": "v0.1.3",
-  "sourceCommit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+  "version": "0.1.4",
+  "tag": "v0.1.4",
+  "sourceCommit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
   "android": {
-    "filename": "bangbang-0.1.3-arm.apk",
-    "bytes": 49169392,
-    "sha256": "628c6183febae70f0a8159e86caef7a80f37d6b7d2b0a48cbab267ddeb1a9af6",
-    "downloadUrl": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.3/bangbang-0.1.3-arm.apk",
+    "filename": "bangbang-0.1.4-arm.apk",
+    "bytes": 49175364,
+    "sha256": "561fb8aa2dc0902bee6dbc99a9ad98b867cb8e9b9df623581f788cfcc7c1634c",
+    "downloadUrl": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.4/bangbang-0.1.4-arm.apk",
     "minVersion": "7.0",
     "architectures": [
       "armeabi-v7a",
@@ -14,15 +14,15 @@
     ]
   },
   "source": {
-    "filename": "bangbang-0.1.3-source.zip",
-    "bytes": 14249404,
-    "sha256": "b0b2e3736bf5534b7f19188a25881407e537d956f1c45589487fb6fa653c2964"
+    "filename": "bangbang-0.1.4-source.zip",
+    "bytes": 14189450,
+    "sha256": "a9efe16764aeba9bfe1ede0f85a09633f87c17403f52da8ca96d2f4f1a8b7f93"
   },
-  "buildInfoSha256": "801074b39b4080cb7e983f2654f85a39cdb016f61e91479e6cdb928dfb36dd8b",
+  "buildInfoSha256": "e254e1cb0c5736884f7848dc9802d5df38577c7573ae08b99c07fa7b0f05ff55",
   "ios": {
     "status": "pending",
     "appStoreUrl": null
   },
-  "buildNumber": 18,
+  "buildNumber": 20,
   "channel": "preview"
 }

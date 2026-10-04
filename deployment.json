@@ -1,20 +1,20 @@
 {
-  "sourceCommit": "f0dd123042439d650ba3b8f00c5198d55006cfd3",
-  "builtAt": "2026-10-03T08:16:34.632Z",
-  "appVersion": "0.1.3",
-  "releaseSourceCommit": "b8bbd580c22aba7543e717c686f1c056fb28bb78",
+  "sourceCommit": "7aed9ee1738eecd4edf4674789db6b43e5aed205",
+  "builtAt": "2026-10-04T00:39:27.852Z",
+  "appVersion": "0.1.4",
+  "releaseSourceCommit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
   "target": "github-pages",
   "websiteUrl": "https://bangbang.yilin.fun/",
   "downloadBaseUrl": "https://bangbang-services.s419505080.chatgpt.site/downloads/",
   "familyApiBaseUrl": "https://bangbang-services.s419505080.chatgpt.site/.netlify/functions/family",
   "downloads": {
-    "android": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.3/bangbang-0.1.3-arm.apk",
-    "source": "https://bangbang-services.s419505080.chatgpt.site/downloads/bangbang-0.1.3-source.zip",
+    "android": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.4/bangbang-0.1.4-arm.apk",
+    "source": "https://bangbang-services.s419505080.chatgpt.site/downloads/bangbang-0.1.4-source.zip",
     "buildInfo": "/downloads/build-info.json",
     "license": "/downloads/AGPL-3.0.txt",
     "checksums": "/downloads/SHA256SUMS"
   },
   "provider": "github-pages",
   "sourceBuildTarget": "sites",
-  "sourceDeploymentSha256": "931bc426350b88750bc5e2642ad0d09e02cd4b2446f4280e2fc3289485c0341b"
+  "sourceDeploymentSha256": "bbf01d02c27912c7ab6be6d59c65d3df506f05d2941cabc4a67fc614a20cd279"
 }
