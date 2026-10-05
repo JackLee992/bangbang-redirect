@@ -1,20 +1,20 @@
 {
-  "sourceCommit": "148ad47943e5e159b6d60feb78cbdeeb5d796872",
-  "builtAt": "2026-10-04T01:51:08.181Z",
-  "appVersion": "0.1.4",
-  "releaseSourceCommit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
+  "sourceCommit": null,
+  "builtAt": "2026-10-05T12:00:29.303Z",
+  "appVersion": "0.1.5",
+  "releaseSourceCommit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
   "target": "github-pages",
   "websiteUrl": "https://bangbang.yilin.fun/",
   "downloadBaseUrl": "https://bangbang-services.s419505080.chatgpt.site/downloads/",
   "familyApiBaseUrl": "https://bangbang-services.s419505080.chatgpt.site/.netlify/functions/family",
   "downloads": {
-    "android": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.4/bangbang-0.1.4-arm.apk",
-    "source": "https://bangbang-services.s419505080.chatgpt.site/downloads/bangbang-0.1.4-source.zip",
+    "android": "https://gitee.com/yilin-dev/bangbang-releases/releases/download/v0.1.5/bangbang-0.1.5-arm.apk",
+    "source": "https://bangbang.yilin.fun/downloads/bangbang-0.1.5-source.zip",
     "buildInfo": "/downloads/build-info.json",
     "license": "/downloads/AGPL-3.0.txt",
     "checksums": "/downloads/SHA256SUMS"
   },
   "provider": "github-pages",
   "sourceBuildTarget": "sites",
-  "sourceDeploymentSha256": "49773979f856208c092cf725bf72b00507237a782d92e16d36514aa2400c2304"
+  "sourceDeploymentSha256": "6f520fd18f80493284aa1636a84a0829f3405b0226fe5117e84cf700a2ece7e8"
 }

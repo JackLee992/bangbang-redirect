@@ -1,11 +1,11 @@
 {
   "app": "帮帮",
-  "version": "0.1.4",
-  "build_number": "20",
-  "build_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-  "release_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-  "build_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37162964984",
-  "verification_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37164594176",
+  "version": "0.1.5",
+  "build_number": "25",
+  "build_commit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
+  "release_commit": "8d10a3853b3df390e00a70f5306ee30d327f07bb",
+  "build_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37208409530",
+  "verification_run": "https://github.com/JackLee992/bangbang-android/actions/runs/37303187804",
   "release_architectures": [
     "arm64-v8a",
     "armeabi-v7a"
@@ -14,20 +14,48 @@
   "signing_certificate_sha256": "af793353035d26390f3f4c577194576f50d613e9fdf1144f43e05eecdb95da83",
   "verification": {
     "result": "passed",
-    "build_run": "37162964984",
-    "apk_sha256": "6244c942d48199b4134fcee14667eca4e6b0ea6f6ddca39750961c03dfba5b9d",
+    "build_run": "37208409530",
+    "apk_sha256": "194ebe60a77f61fb4fd76eb9025282431fc62c5f7f5d428021a534ed2d6f372e",
     "platform_notices": {
       "emulator-5554": [
+        "Quickstep isn't responding"
+      ],
+      "emulator-5556": [
         "Quickstep isn't responding"
       ]
     },
     "devices": "Two Android 35 x86_64 emulators on one GitHub runner",
-    "network": "Default RustDesk public discovery; no custom server configuration",
+    "network": "Aliyun default service; both installed native configurations verified",
+    "remote_profiles": {
+      "elder": {
+        "profile": "aliyun-ecs-v1",
+        "verified": true,
+        "source": "installed_app_native_config",
+        "options": {
+          "custom-rendezvous-server": "123.57.57.202:21116",
+          "relay-server": "123.57.57.202:21117",
+          "api-server": "",
+          "key": "lMADRklrhk4PQsqe1sy1VCqF6amA0WS6GImbUKnmbTo="
+        }
+      },
+      "helper": {
+        "profile": "aliyun-ecs-v1",
+        "verified": true,
+        "source": "installed_app_native_config",
+        "options": {
+          "custom-rendezvous-server": "123.57.57.202:21116",
+          "relay-server": "123.57.57.202:21117",
+          "api-server": "",
+          "key": "lMADRklrhk4PQsqe1sy1VCqF6amA0WS6GImbUKnmbTo="
+        }
+      }
+    },
     "checks": [
       "default elder mode",
+      "verified Aliyun tuple on both installed APKs",
       "local authorization",
       "encoded invitation opens helper confirmation",
-      "public ID connection",
+      "same-service ID connection",
       "incoming approval",
       "live video",
       "remote touch changes elder UI",
@@ -37,28 +65,29 @@
     "limits": "Not a physical-device or different-mobile-carrier test"
   },
   "native_delivery": {
-    "manifest_sha256": "dacad9f0107c59599ed7bacde87dcb471c8c00e042db1d0a978ef51c50ac805f",
+    "manifest_sha256": "2097f99cb19e680f87dfda9b43c052e5ec43c48ece39b2954f4fa0f6b66905a6",
     "manifest": {
       "abis": {
         "arm64-v8a": {
           "manifest": "delivery/arm64-v8a/manifest.json",
-          "sha256": "26f9d19e8533cae488095a4059d3a6866664640df5d13e3a76b1167d9ceb38da"
+          "sha256": "adbd9bffa3067ed0c2cb737de59f4b518856ea2cd5d4eca72f02b6ca041b30c7"
         },
         "armeabi-v7a": {
           "manifest": "delivery/armeabi-v7a/manifest.json",
-          "sha256": "0eb9af5859a04590005616e09fe01b3fce539424f709baf4a3626cc784e842f5"
+          "sha256": "5d375e679fe0464d89ba25fd3ce2b80815835ac7e6f8c4438b8bb12cadb01df8"
         },
         "x86_64": {
           "manifest": "delivery/x86_64/manifest.json",
-          "sha256": "7369a980382007b11412d24c04a0e86aea83394590069671859842ce72ca5b95"
+          "sha256": "7d3523560298456ea615e8ca3e0bdbd437cb434156278e6c0469792a12f875b8"
         }
       },
       "aggregated": true,
       "schema_version": 1,
-      "source_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-      "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+      "source_commit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
+      "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
       "source_files": {
         ".cargo/config.toml": "a606016dff220811e0a1ed870158b41c6074ffbc4db459f05174ccc1c69ad610",
+        ".github/patches/hbb-common-tcp-diagnostics.patch": "7a24b940dfe680fb94cbb3aeb056d9213cba2ee7c0a698b1bfeec7dc068b573c",
         ".gitmodules": "0cbdb9cb5ecf1b8f977d5ebc91ef9a99fe02c256a12fe58eb32ee2e4ca52b2d6",
         "Cargo.lock": "41bdf1ecbd5d2fe865bad1bc88a9bfb418e2b00d8ea86cd02306dd383113a82e",
         "Cargo.toml": "45128962832c364d2129e24b773d2fc3330a7b4d5825d08767481eebcfe746e1",
@@ -145,7 +174,7 @@
         "libs/hbb_common/src/proxy.rs": "2fe3017ea39c5666e255a59e16946c52d1adaac065a566a579f3560db8d65406",
         "libs/hbb_common/src/socket_client.rs": "c86f385b2fd55b501c77923afd2fd390d2b7c7caa1a87bc18ff41794ef56542d",
         "libs/hbb_common/src/stream.rs": "bb541d243e0c7b8c22c82ff0acfd6e2fa0ed792acb57427a1d10852e46392d11",
-        "libs/hbb_common/src/tcp.rs": "9998c8790399f324b446ccabff46c23aba633eaacf6dfe6e114b73cf6a03524a",
+        "libs/hbb_common/src/tcp.rs": "39f48d573ff65304aa73a02dd3fba6238117fb9198e64e604a5779cffdb6167c",
         "libs/hbb_common/src/tls.rs": "d1619594e6db7d039096f34dbff69d508f2ac4d336f3709f439b7533fcfc7388",
         "libs/hbb_common/src/udp.rs": "c7da75a4db64fea07f6dce1ad5a791fb4d791b15dcc41672129b0f6438ad8b2f",
         "libs/hbb_common/src/verifier.rs": "0b1ebb0c6c1d383c572d45e3f09daa4956ea49650647aaa03600a12ac3de621e",
@@ -381,22 +410,24 @@
         "scripts/qinban/android-triplets/arm64-android.cmake": "bdfa78181d7df2877e8fdaee8b7d1df8b9e0bfabedd39b5c29ff69c2c944725b",
         "scripts/qinban/android-triplets/x64-android.cmake": "a5359ec43d746edca608922a04bb565f2c878f9f95235aa9a68a0e78395b3309",
         "scripts/qinban/android_native_elf.py": "334105e21fcaa4b21fd181f6f7de07ce6d22915958deef86aba447647b4a2097",
-        "scripts/qinban/android_native_manifest.py": "8ad49e684a34e51249318905bfff3ae2f0ab7f8e71f337066e3a8f22eff42bc0",
-        "scripts/qinban/build_android_native.py": "3f7767dcc3dc42dd36f5765166768870829a4c804dae5412ba729f6cea113c48",
+        "scripts/qinban/android_native_manifest.py": "b0b289b7f432b686de71c98714231e727cafae9485dace16cc0855c2db19ce5e",
+        "scripts/qinban/apply_native_patches.py": "e310eaa99ecec03c55108fe46dee1e3d98c148aff6084fb50b4c0ced4f01b637",
+        "scripts/qinban/build_android_native.py": "e4fe8353ff59ce7021b15aca00b77b51b2d80d848f504f55be66d3321c702649",
         "src/auth_2fa.rs": "34d68a2c71280d83782e1c1124aa99cbd9f4db557b9951be2cb17a29fcdff80b",
         "src/bridge_generated.io.rs": "e342987bf0da4b4428e8f93cd670de9b8c335c017a680983730f3908aa73b5b0",
         "src/bridge_generated.rs": "2ba8eac8c22b8c94d0b4f49350751103ac8f84391a19c62463f7ba58da839ff8",
-        "src/client.rs": "ea1c553b911ba379b8642ad7f4037d658d524ab9bbe3fa4ec82e7f69c264e58a",
+        "src/client.rs": "aa77e0b71a4ec807df8f33d1e3e1315ffe6c4c206f5631a09fad80f2a0ad7a36",
         "src/client/file_trait.rs": "5e02f030a322a54b1e9f0fd0690af48c49a663085cf8c07781a4e164e39dfa18",
         "src/client/helper.rs": "28f47a438f7895726ad0b754674cacca93cb72f1146cbb4d62f9c4343a708722",
-        "src/client/io_loop.rs": "e0027d93e2bdd14d91d7a8eadd90508ff5efb34c542ce9798ef21749b81b9721",
+        "src/client/io_loop.rs": "d1eaaa180c8681cfbf7fdc6527c1fa7739c927d8f0405db4ed043cfdb6d87136",
         "src/client/screenshot.rs": "236fcff19353e18d1203e97e56f558b9e5d2967c9bd28a2fadeb73afef21f430",
         "src/clipboard.rs": "a700383867031ce2d0d0108a81738f9ae932f34fe838af3995ddc04d39419a68",
         "src/clipboard_file.rs": "63324dd23aa28b40723f00510e17c35acc97fcde4104c16756c41ae292684b26",
-        "src/common.rs": "1712b19afab3ba72c67090f309da2bb208d58def1f865d610d3d009245407685",
+        "src/common.rs": "36446706016adf851e8c4dfc9e4ef9f21447c35cdbf086a7fa904c6b035c2fe6",
+        "src/connection_transport.rs": "d084e3b3fc737d39ba924528f257440cb75e3e80f96d799b7d17803f3ba59e6f",
         "src/core_main.rs": "98afa31352743b961c7f75a2da36f06772dba02ccf38400192eeb1629d713e08",
         "src/custom_server.rs": "a5b28d5b79512a3524b38fa34276bd1cb9349f0194518b86e7cbb4bb800d0b7d",
-        "src/flutter.rs": "a201ce73f27c2075ba1d33d9e7daf8987db48427c273519949df03a5f7404e27",
+        "src/flutter.rs": "0d156aebfad4e6d42a0b345abcf614c8d8d4c2196738f54ca5e488974157d23f",
         "src/flutter_ffi.rs": "2a71985e00be86bee0b409658cf4757f611b835f199163a7e441979a9ca3ac6f",
         "src/hbbs_http.rs": "855492afae03654e2d9e440c4f49b253ac77e21a92aec150dedbb0dbaa5f3c26",
         "src/hbbs_http/account.rs": "59fbf89654f108f76423588e1e42ffe7ee75834787631852acdefe34f7df2e40",
@@ -463,7 +494,7 @@
         "src/lang/tw.rs": "4bfb83105daa57929e4469014d98a49387b48d6c829dd0cfff8c34f05e3b4ffc",
         "src/lang/uk.rs": "7f7a2caef157201f728703125d7406c585d69ee19ca1675f34be7c20d150343e",
         "src/lang/vi.rs": "5cbe35cbf5aa3ec2951424abf242cec52231f81e2d6f284ec067d6d9167f10b6",
-        "src/lib.rs": "9a82dd1a219057cfdc30cbce6bdd762b56839b9a72ada39d1efbf2893b434af0",
+        "src/lib.rs": "a941470923bf5740deadbeb32d5a8e39da9f61bd5c1814f22ea85079d72f4ddc",
         "src/main.rs": "79264725d81ad6175e136d532c610aff0759acebf343dddb7bf3cec4a282fec7",
         "src/naming.rs": "3470a4114b04a3dc85a47f7f932b2a7f6cb5760e0546548fff59d701f61561e8",
         "src/platform/delegate.rs": "1a6f68fc2923fcc78ac89d08f0e672204e5ffe793f19b7b9c7f9edeaa141d83b",
@@ -507,7 +538,7 @@
         "src/privacy_mode/win_topmost_window.rs": "6d2baf22b83084896c7ce04af2e6c244b5b5bfd59959c2a6a2ec8da2f2c5570c",
         "src/privacy_mode/win_virtual_display.rs": "60d75106660093dfce895129a4a9a9fdbe034097540fb726d9539182f040f7bf",
         "src/registration_transport.rs": "c2a4ee25a42bf20b23cec30a70137cca69f50c8950ea7e7dc979310c5e47e8ba",
-        "src/rendezvous_mediator.rs": "e6c60d4016a554716d1c9f8a9680116f3e0d319b995fb2822c51517c89f09555",
+        "src/rendezvous_mediator.rs": "ec7b75f7418ac39fa7ed4ddfe7ce69e2f3551421f9adc1a8fe3a26d6bd38c1cb",
         "src/server.rs": "32c5485c59ef2d5d1be149ffbce0a4c7176cb1a7dbed55ac763ecfed93325176",
         "src/server/audio_service.rs": "fc457ae565a10cda97ff396979850ccc59af6f763306984e88458e2f5ef63c8f",
         "src/server/clipboard_service.rs": "1988f582a34e2fcdfd1e3356e56d31ad96f67dfa00ed48432771ea30eb7116f0",
@@ -556,7 +587,7 @@
         "src/ui/remote.tis": "3e14634e696492c1e2eec4b70d376ea54a2f646eef28cebf2c9e32853d63a9a1",
         "src/ui_cm_interface.rs": "80f5044f3fd13c84d44224abbe6c48de5b1cad2396ec2e29eddf471ab11969b3",
         "src/ui_interface.rs": "ed889dedd931ba54b7225dfb8f20308dfc05b7d490c9eddb1aac2f91ae74b22e",
-        "src/ui_session_interface.rs": "ec86b5f1d97505787a3d815e5af5f7573870f9f930fa6e056446afd68e1f0d8d",
+        "src/ui_session_interface.rs": "a07a2e9cf7d601fe2a97d743e05363b2f72a90eedf647776a1b56673e9d1e64d",
         "src/updater.rs": "a1153de2a76c95218b7b6ebe1230ed453f05cce11e6b26c2de820d3f7addf585",
         "src/virtual_display_manager.rs": "318efa9016953629dc1f49807bef295e2e88520a65f6ace6137dbd529615981f",
         "src/whiteboard/client.rs": "a8630179efa1fac190a6f4ab84338e12fad35b00bab3a3310653929b6af9b262",
@@ -568,7 +599,7 @@
         "src/whiteboard/windows.rs": "d7354f564e1521c557afc6d78d6b368bf4ae3dda54876d7850d9e954ccbb5060",
         "vcpkg.json": "64507a425be8d92cbb28d180d33986d8c419238cd6cae960e6a365d7691bbea0"
       },
-      "started_at": "2026-10-03T23:56:19.128376+00:00",
+      "started_at": "2026-10-04T14:18:14.891015+00:00",
       "status": "verified",
       "submodules": "7e1c392c62d39c364127307cd408421dd5f8cfb0 libs/hbb_common (7e1c392)",
       "toolchain": {
@@ -590,7 +621,7 @@
       "arm64-v8a": {
         "abi": "arm64-v8a",
         "audit": {
-          "candidate_sha256": "bbdb652ce560043f5e8b60b0834a3cab8c9a98cd71f7cd591d91c108bc016d0d",
+          "candidate_sha256": "97985b869f36792df24afa359773c6961a5ec0a006545a51ce28010e1bea1c87",
           "ffi": {
             "bridge_sha256": "9b54d7c2b1e06735a2d74e6216117eebfaa7b537f5a843654b32cd4cad9c4f6e",
             "excluded_non_android": [
@@ -721,7 +752,7 @@
                   "libc.so"
                 ],
                 "no_rpath": true,
-                "sha256": "bbdb652ce560043f5e8b60b0834a3cab8c9a98cd71f7cd591d91c108bc016d0d"
+                "sha256": "97985b869f36792df24afa359773c6961a5ec0a006545a51ce28010e1bea1c87"
               }
             },
             "missing_libraries": [],
@@ -795,8 +826,8 @@
         },
         "generated_outputs": {
           "src/version.rs": {
-            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 00:06\";\n",
-            "sha256": "5f90b109843516d8212be0b2b43c3ef26495b52a679ff72e17a6c9bc7b497499"
+            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 14:42\";\n",
+            "sha256": "93d12ce580735de786ed297911f14b4cb969ee0ec6fb51a1076195bf21946357"
           }
         },
         "libraries": {
@@ -811,22 +842,23 @@
             "sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c"
           },
           "librustdesk.so": {
-            "bytes": 31329672,
+            "bytes": 31339320,
             "elf": {
               "bits": 64,
               "endianness": "little",
               "machine": 183,
               "type": "DYN"
             },
-            "sha256": "bbdb652ce560043f5e8b60b0834a3cab8c9a98cd71f7cd591d91c108bc016d0d"
+            "sha256": "97985b869f36792df24afa359773c6961a5ec0a006545a51ce28010e1bea1c87"
           }
         },
         "runtime_original_sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
         "schema_version": 1,
-        "source_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-        "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+        "source_commit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
+        "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
         "source_files": {
           ".cargo/config.toml": "a606016dff220811e0a1ed870158b41c6074ffbc4db459f05174ccc1c69ad610",
+          ".github/patches/hbb-common-tcp-diagnostics.patch": "7a24b940dfe680fb94cbb3aeb056d9213cba2ee7c0a698b1bfeec7dc068b573c",
           ".gitmodules": "0cbdb9cb5ecf1b8f977d5ebc91ef9a99fe02c256a12fe58eb32ee2e4ca52b2d6",
           "Cargo.lock": "41bdf1ecbd5d2fe865bad1bc88a9bfb418e2b00d8ea86cd02306dd383113a82e",
           "Cargo.toml": "45128962832c364d2129e24b773d2fc3330a7b4d5825d08767481eebcfe746e1",
@@ -913,7 +945,7 @@
           "libs/hbb_common/src/proxy.rs": "2fe3017ea39c5666e255a59e16946c52d1adaac065a566a579f3560db8d65406",
           "libs/hbb_common/src/socket_client.rs": "c86f385b2fd55b501c77923afd2fd390d2b7c7caa1a87bc18ff41794ef56542d",
           "libs/hbb_common/src/stream.rs": "bb541d243e0c7b8c22c82ff0acfd6e2fa0ed792acb57427a1d10852e46392d11",
-          "libs/hbb_common/src/tcp.rs": "9998c8790399f324b446ccabff46c23aba633eaacf6dfe6e114b73cf6a03524a",
+          "libs/hbb_common/src/tcp.rs": "39f48d573ff65304aa73a02dd3fba6238117fb9198e64e604a5779cffdb6167c",
           "libs/hbb_common/src/tls.rs": "d1619594e6db7d039096f34dbff69d508f2ac4d336f3709f439b7533fcfc7388",
           "libs/hbb_common/src/udp.rs": "c7da75a4db64fea07f6dce1ad5a791fb4d791b15dcc41672129b0f6438ad8b2f",
           "libs/hbb_common/src/verifier.rs": "0b1ebb0c6c1d383c572d45e3f09daa4956ea49650647aaa03600a12ac3de621e",
@@ -1149,22 +1181,24 @@
           "scripts/qinban/android-triplets/arm64-android.cmake": "bdfa78181d7df2877e8fdaee8b7d1df8b9e0bfabedd39b5c29ff69c2c944725b",
           "scripts/qinban/android-triplets/x64-android.cmake": "a5359ec43d746edca608922a04bb565f2c878f9f95235aa9a68a0e78395b3309",
           "scripts/qinban/android_native_elf.py": "334105e21fcaa4b21fd181f6f7de07ce6d22915958deef86aba447647b4a2097",
-          "scripts/qinban/android_native_manifest.py": "8ad49e684a34e51249318905bfff3ae2f0ab7f8e71f337066e3a8f22eff42bc0",
-          "scripts/qinban/build_android_native.py": "3f7767dcc3dc42dd36f5765166768870829a4c804dae5412ba729f6cea113c48",
+          "scripts/qinban/android_native_manifest.py": "b0b289b7f432b686de71c98714231e727cafae9485dace16cc0855c2db19ce5e",
+          "scripts/qinban/apply_native_patches.py": "e310eaa99ecec03c55108fe46dee1e3d98c148aff6084fb50b4c0ced4f01b637",
+          "scripts/qinban/build_android_native.py": "e4fe8353ff59ce7021b15aca00b77b51b2d80d848f504f55be66d3321c702649",
           "src/auth_2fa.rs": "34d68a2c71280d83782e1c1124aa99cbd9f4db557b9951be2cb17a29fcdff80b",
           "src/bridge_generated.io.rs": "e342987bf0da4b4428e8f93cd670de9b8c335c017a680983730f3908aa73b5b0",
           "src/bridge_generated.rs": "2ba8eac8c22b8c94d0b4f49350751103ac8f84391a19c62463f7ba58da839ff8",
-          "src/client.rs": "ea1c553b911ba379b8642ad7f4037d658d524ab9bbe3fa4ec82e7f69c264e58a",
+          "src/client.rs": "aa77e0b71a4ec807df8f33d1e3e1315ffe6c4c206f5631a09fad80f2a0ad7a36",
           "src/client/file_trait.rs": "5e02f030a322a54b1e9f0fd0690af48c49a663085cf8c07781a4e164e39dfa18",
           "src/client/helper.rs": "28f47a438f7895726ad0b754674cacca93cb72f1146cbb4d62f9c4343a708722",
-          "src/client/io_loop.rs": "e0027d93e2bdd14d91d7a8eadd90508ff5efb34c542ce9798ef21749b81b9721",
+          "src/client/io_loop.rs": "d1eaaa180c8681cfbf7fdc6527c1fa7739c927d8f0405db4ed043cfdb6d87136",
           "src/client/screenshot.rs": "236fcff19353e18d1203e97e56f558b9e5d2967c9bd28a2fadeb73afef21f430",
           "src/clipboard.rs": "a700383867031ce2d0d0108a81738f9ae932f34fe838af3995ddc04d39419a68",
           "src/clipboard_file.rs": "63324dd23aa28b40723f00510e17c35acc97fcde4104c16756c41ae292684b26",
-          "src/common.rs": "1712b19afab3ba72c67090f309da2bb208d58def1f865d610d3d009245407685",
+          "src/common.rs": "36446706016adf851e8c4dfc9e4ef9f21447c35cdbf086a7fa904c6b035c2fe6",
+          "src/connection_transport.rs": "d084e3b3fc737d39ba924528f257440cb75e3e80f96d799b7d17803f3ba59e6f",
           "src/core_main.rs": "98afa31352743b961c7f75a2da36f06772dba02ccf38400192eeb1629d713e08",
           "src/custom_server.rs": "a5b28d5b79512a3524b38fa34276bd1cb9349f0194518b86e7cbb4bb800d0b7d",
-          "src/flutter.rs": "a201ce73f27c2075ba1d33d9e7daf8987db48427c273519949df03a5f7404e27",
+          "src/flutter.rs": "0d156aebfad4e6d42a0b345abcf614c8d8d4c2196738f54ca5e488974157d23f",
           "src/flutter_ffi.rs": "2a71985e00be86bee0b409658cf4757f611b835f199163a7e441979a9ca3ac6f",
           "src/hbbs_http.rs": "855492afae03654e2d9e440c4f49b253ac77e21a92aec150dedbb0dbaa5f3c26",
           "src/hbbs_http/account.rs": "59fbf89654f108f76423588e1e42ffe7ee75834787631852acdefe34f7df2e40",
@@ -1231,7 +1265,7 @@
           "src/lang/tw.rs": "4bfb83105daa57929e4469014d98a49387b48d6c829dd0cfff8c34f05e3b4ffc",
           "src/lang/uk.rs": "7f7a2caef157201f728703125d7406c585d69ee19ca1675f34be7c20d150343e",
           "src/lang/vi.rs": "5cbe35cbf5aa3ec2951424abf242cec52231f81e2d6f284ec067d6d9167f10b6",
-          "src/lib.rs": "9a82dd1a219057cfdc30cbce6bdd762b56839b9a72ada39d1efbf2893b434af0",
+          "src/lib.rs": "a941470923bf5740deadbeb32d5a8e39da9f61bd5c1814f22ea85079d72f4ddc",
           "src/main.rs": "79264725d81ad6175e136d532c610aff0759acebf343dddb7bf3cec4a282fec7",
           "src/naming.rs": "3470a4114b04a3dc85a47f7f932b2a7f6cb5760e0546548fff59d701f61561e8",
           "src/platform/delegate.rs": "1a6f68fc2923fcc78ac89d08f0e672204e5ffe793f19b7b9c7f9edeaa141d83b",
@@ -1275,7 +1309,7 @@
           "src/privacy_mode/win_topmost_window.rs": "6d2baf22b83084896c7ce04af2e6c244b5b5bfd59959c2a6a2ec8da2f2c5570c",
           "src/privacy_mode/win_virtual_display.rs": "60d75106660093dfce895129a4a9a9fdbe034097540fb726d9539182f040f7bf",
           "src/registration_transport.rs": "c2a4ee25a42bf20b23cec30a70137cca69f50c8950ea7e7dc979310c5e47e8ba",
-          "src/rendezvous_mediator.rs": "e6c60d4016a554716d1c9f8a9680116f3e0d319b995fb2822c51517c89f09555",
+          "src/rendezvous_mediator.rs": "ec7b75f7418ac39fa7ed4ddfe7ce69e2f3551421f9adc1a8fe3a26d6bd38c1cb",
           "src/server.rs": "32c5485c59ef2d5d1be149ffbce0a4c7176cb1a7dbed55ac763ecfed93325176",
           "src/server/audio_service.rs": "fc457ae565a10cda97ff396979850ccc59af6f763306984e88458e2f5ef63c8f",
           "src/server/clipboard_service.rs": "1988f582a34e2fcdfd1e3356e56d31ad96f67dfa00ed48432771ea30eb7116f0",
@@ -1324,7 +1358,7 @@
           "src/ui/remote.tis": "3e14634e696492c1e2eec4b70d376ea54a2f646eef28cebf2c9e32853d63a9a1",
           "src/ui_cm_interface.rs": "80f5044f3fd13c84d44224abbe6c48de5b1cad2396ec2e29eddf471ab11969b3",
           "src/ui_interface.rs": "ed889dedd931ba54b7225dfb8f20308dfc05b7d490c9eddb1aac2f91ae74b22e",
-          "src/ui_session_interface.rs": "ec86b5f1d97505787a3d815e5af5f7573870f9f930fa6e056446afd68e1f0d8d",
+          "src/ui_session_interface.rs": "a07a2e9cf7d601fe2a97d743e05363b2f72a90eedf647776a1b56673e9d1e64d",
           "src/updater.rs": "a1153de2a76c95218b7b6ebe1230ed453f05cce11e6b26c2de820d3f7addf585",
           "src/virtual_display_manager.rs": "318efa9016953629dc1f49807bef295e2e88520a65f6ace6137dbd529615981f",
           "src/whiteboard/client.rs": "a8630179efa1fac190a6f4ab84338e12fad35b00bab3a3310653929b6af9b262",
@@ -1365,7 +1399,7 @@
       "armeabi-v7a": {
         "abi": "armeabi-v7a",
         "audit": {
-          "candidate_sha256": "755a55541263b6a7845fb7575c0f4fc9cbe1238394166c10b1c9442ddc5edb7e",
+          "candidate_sha256": "2e40018b13a4f2caafb5a7d667adfd6ab2a3e501f34596b0018791a07126da19",
           "ffi": {
             "bridge_sha256": "9b54d7c2b1e06735a2d74e6216117eebfaa7b537f5a843654b32cd4cad9c4f6e",
             "excluded_non_android": [
@@ -1496,7 +1530,7 @@
                   "libc.so"
                 ],
                 "no_rpath": true,
-                "sha256": "755a55541263b6a7845fb7575c0f4fc9cbe1238394166c10b1c9442ddc5edb7e"
+                "sha256": "2e40018b13a4f2caafb5a7d667adfd6ab2a3e501f34596b0018791a07126da19"
               }
             },
             "missing_libraries": [],
@@ -1550,8 +1584,8 @@
         },
         "generated_outputs": {
           "src/version.rs": {
-            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 00:06\";\n",
-            "sha256": "5f90b109843516d8212be0b2b43c3ef26495b52a679ff72e17a6c9bc7b497499"
+            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 14:35\";\n",
+            "sha256": "1e763b683b59e88e62f57182d6b40f540069f1bae038aae260cf196795a9d178"
           }
         },
         "libraries": {
@@ -1566,22 +1600,23 @@
             "sha256": "e7e20f6e0f3f181e853cea50373ecee2ccfe95c668dce72d0999b2469c92d0e1"
           },
           "librustdesk.so": {
-            "bytes": 24578972,
+            "bytes": 24585596,
             "elf": {
               "bits": 32,
               "endianness": "little",
               "machine": 40,
               "type": "DYN"
             },
-            "sha256": "755a55541263b6a7845fb7575c0f4fc9cbe1238394166c10b1c9442ddc5edb7e"
+            "sha256": "2e40018b13a4f2caafb5a7d667adfd6ab2a3e501f34596b0018791a07126da19"
           }
         },
         "runtime_original_sha256": "10ee48131d6742899619f7cfb3b8df150ad787d723c766a3fb80d4bb275711ff",
         "schema_version": 1,
-        "source_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-        "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+        "source_commit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
+        "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
         "source_files": {
           ".cargo/config.toml": "a606016dff220811e0a1ed870158b41c6074ffbc4db459f05174ccc1c69ad610",
+          ".github/patches/hbb-common-tcp-diagnostics.patch": "7a24b940dfe680fb94cbb3aeb056d9213cba2ee7c0a698b1bfeec7dc068b573c",
           ".gitmodules": "0cbdb9cb5ecf1b8f977d5ebc91ef9a99fe02c256a12fe58eb32ee2e4ca52b2d6",
           "Cargo.lock": "41bdf1ecbd5d2fe865bad1bc88a9bfb418e2b00d8ea86cd02306dd383113a82e",
           "Cargo.toml": "45128962832c364d2129e24b773d2fc3330a7b4d5825d08767481eebcfe746e1",
@@ -1668,7 +1703,7 @@
           "libs/hbb_common/src/proxy.rs": "2fe3017ea39c5666e255a59e16946c52d1adaac065a566a579f3560db8d65406",
           "libs/hbb_common/src/socket_client.rs": "c86f385b2fd55b501c77923afd2fd390d2b7c7caa1a87bc18ff41794ef56542d",
           "libs/hbb_common/src/stream.rs": "bb541d243e0c7b8c22c82ff0acfd6e2fa0ed792acb57427a1d10852e46392d11",
-          "libs/hbb_common/src/tcp.rs": "9998c8790399f324b446ccabff46c23aba633eaacf6dfe6e114b73cf6a03524a",
+          "libs/hbb_common/src/tcp.rs": "39f48d573ff65304aa73a02dd3fba6238117fb9198e64e604a5779cffdb6167c",
           "libs/hbb_common/src/tls.rs": "d1619594e6db7d039096f34dbff69d508f2ac4d336f3709f439b7533fcfc7388",
           "libs/hbb_common/src/udp.rs": "c7da75a4db64fea07f6dce1ad5a791fb4d791b15dcc41672129b0f6438ad8b2f",
           "libs/hbb_common/src/verifier.rs": "0b1ebb0c6c1d383c572d45e3f09daa4956ea49650647aaa03600a12ac3de621e",
@@ -1904,22 +1939,24 @@
           "scripts/qinban/android-triplets/arm64-android.cmake": "bdfa78181d7df2877e8fdaee8b7d1df8b9e0bfabedd39b5c29ff69c2c944725b",
           "scripts/qinban/android-triplets/x64-android.cmake": "a5359ec43d746edca608922a04bb565f2c878f9f95235aa9a68a0e78395b3309",
           "scripts/qinban/android_native_elf.py": "334105e21fcaa4b21fd181f6f7de07ce6d22915958deef86aba447647b4a2097",
-          "scripts/qinban/android_native_manifest.py": "8ad49e684a34e51249318905bfff3ae2f0ab7f8e71f337066e3a8f22eff42bc0",
-          "scripts/qinban/build_android_native.py": "3f7767dcc3dc42dd36f5765166768870829a4c804dae5412ba729f6cea113c48",
+          "scripts/qinban/android_native_manifest.py": "b0b289b7f432b686de71c98714231e727cafae9485dace16cc0855c2db19ce5e",
+          "scripts/qinban/apply_native_patches.py": "e310eaa99ecec03c55108fe46dee1e3d98c148aff6084fb50b4c0ced4f01b637",
+          "scripts/qinban/build_android_native.py": "e4fe8353ff59ce7021b15aca00b77b51b2d80d848f504f55be66d3321c702649",
           "src/auth_2fa.rs": "34d68a2c71280d83782e1c1124aa99cbd9f4db557b9951be2cb17a29fcdff80b",
           "src/bridge_generated.io.rs": "e342987bf0da4b4428e8f93cd670de9b8c335c017a680983730f3908aa73b5b0",
           "src/bridge_generated.rs": "2ba8eac8c22b8c94d0b4f49350751103ac8f84391a19c62463f7ba58da839ff8",
-          "src/client.rs": "ea1c553b911ba379b8642ad7f4037d658d524ab9bbe3fa4ec82e7f69c264e58a",
+          "src/client.rs": "aa77e0b71a4ec807df8f33d1e3e1315ffe6c4c206f5631a09fad80f2a0ad7a36",
           "src/client/file_trait.rs": "5e02f030a322a54b1e9f0fd0690af48c49a663085cf8c07781a4e164e39dfa18",
           "src/client/helper.rs": "28f47a438f7895726ad0b754674cacca93cb72f1146cbb4d62f9c4343a708722",
-          "src/client/io_loop.rs": "e0027d93e2bdd14d91d7a8eadd90508ff5efb34c542ce9798ef21749b81b9721",
+          "src/client/io_loop.rs": "d1eaaa180c8681cfbf7fdc6527c1fa7739c927d8f0405db4ed043cfdb6d87136",
           "src/client/screenshot.rs": "236fcff19353e18d1203e97e56f558b9e5d2967c9bd28a2fadeb73afef21f430",
           "src/clipboard.rs": "a700383867031ce2d0d0108a81738f9ae932f34fe838af3995ddc04d39419a68",
           "src/clipboard_file.rs": "63324dd23aa28b40723f00510e17c35acc97fcde4104c16756c41ae292684b26",
-          "src/common.rs": "1712b19afab3ba72c67090f309da2bb208d58def1f865d610d3d009245407685",
+          "src/common.rs": "36446706016adf851e8c4dfc9e4ef9f21447c35cdbf086a7fa904c6b035c2fe6",
+          "src/connection_transport.rs": "d084e3b3fc737d39ba924528f257440cb75e3e80f96d799b7d17803f3ba59e6f",
           "src/core_main.rs": "98afa31352743b961c7f75a2da36f06772dba02ccf38400192eeb1629d713e08",
           "src/custom_server.rs": "a5b28d5b79512a3524b38fa34276bd1cb9349f0194518b86e7cbb4bb800d0b7d",
-          "src/flutter.rs": "a201ce73f27c2075ba1d33d9e7daf8987db48427c273519949df03a5f7404e27",
+          "src/flutter.rs": "0d156aebfad4e6d42a0b345abcf614c8d8d4c2196738f54ca5e488974157d23f",
           "src/flutter_ffi.rs": "2a71985e00be86bee0b409658cf4757f611b835f199163a7e441979a9ca3ac6f",
           "src/hbbs_http.rs": "855492afae03654e2d9e440c4f49b253ac77e21a92aec150dedbb0dbaa5f3c26",
           "src/hbbs_http/account.rs": "59fbf89654f108f76423588e1e42ffe7ee75834787631852acdefe34f7df2e40",
@@ -1986,7 +2023,7 @@
           "src/lang/tw.rs": "4bfb83105daa57929e4469014d98a49387b48d6c829dd0cfff8c34f05e3b4ffc",
           "src/lang/uk.rs": "7f7a2caef157201f728703125d7406c585d69ee19ca1675f34be7c20d150343e",
           "src/lang/vi.rs": "5cbe35cbf5aa3ec2951424abf242cec52231f81e2d6f284ec067d6d9167f10b6",
-          "src/lib.rs": "9a82dd1a219057cfdc30cbce6bdd762b56839b9a72ada39d1efbf2893b434af0",
+          "src/lib.rs": "a941470923bf5740deadbeb32d5a8e39da9f61bd5c1814f22ea85079d72f4ddc",
           "src/main.rs": "79264725d81ad6175e136d532c610aff0759acebf343dddb7bf3cec4a282fec7",
           "src/naming.rs": "3470a4114b04a3dc85a47f7f932b2a7f6cb5760e0546548fff59d701f61561e8",
           "src/platform/delegate.rs": "1a6f68fc2923fcc78ac89d08f0e672204e5ffe793f19b7b9c7f9edeaa141d83b",
@@ -2030,7 +2067,7 @@
           "src/privacy_mode/win_topmost_window.rs": "6d2baf22b83084896c7ce04af2e6c244b5b5bfd59959c2a6a2ec8da2f2c5570c",
           "src/privacy_mode/win_virtual_display.rs": "60d75106660093dfce895129a4a9a9fdbe034097540fb726d9539182f040f7bf",
           "src/registration_transport.rs": "c2a4ee25a42bf20b23cec30a70137cca69f50c8950ea7e7dc979310c5e47e8ba",
-          "src/rendezvous_mediator.rs": "e6c60d4016a554716d1c9f8a9680116f3e0d319b995fb2822c51517c89f09555",
+          "src/rendezvous_mediator.rs": "ec7b75f7418ac39fa7ed4ddfe7ce69e2f3551421f9adc1a8fe3a26d6bd38c1cb",
           "src/server.rs": "32c5485c59ef2d5d1be149ffbce0a4c7176cb1a7dbed55ac763ecfed93325176",
           "src/server/audio_service.rs": "fc457ae565a10cda97ff396979850ccc59af6f763306984e88458e2f5ef63c8f",
           "src/server/clipboard_service.rs": "1988f582a34e2fcdfd1e3356e56d31ad96f67dfa00ed48432771ea30eb7116f0",
@@ -2079,7 +2116,7 @@
           "src/ui/remote.tis": "3e14634e696492c1e2eec4b70d376ea54a2f646eef28cebf2c9e32853d63a9a1",
           "src/ui_cm_interface.rs": "80f5044f3fd13c84d44224abbe6c48de5b1cad2396ec2e29eddf471ab11969b3",
           "src/ui_interface.rs": "ed889dedd931ba54b7225dfb8f20308dfc05b7d490c9eddb1aac2f91ae74b22e",
-          "src/ui_session_interface.rs": "ec86b5f1d97505787a3d815e5af5f7573870f9f930fa6e056446afd68e1f0d8d",
+          "src/ui_session_interface.rs": "a07a2e9cf7d601fe2a97d743e05363b2f72a90eedf647776a1b56673e9d1e64d",
           "src/updater.rs": "a1153de2a76c95218b7b6ebe1230ed453f05cce11e6b26c2de820d3f7addf585",
           "src/virtual_display_manager.rs": "318efa9016953629dc1f49807bef295e2e88520a65f6ace6137dbd529615981f",
           "src/whiteboard/client.rs": "a8630179efa1fac190a6f4ab84338e12fad35b00bab3a3310653929b6af9b262",
@@ -2120,7 +2157,7 @@
       "x86_64": {
         "abi": "x86_64",
         "audit": {
-          "candidate_sha256": "76fd6ff5a00d90047e5f0b040f0697c2f5e3611126f8aeac21cb196080c7a8a3",
+          "candidate_sha256": "6f18ee03296c78cd5cc872835cfdb2dbdf0c1b41b3ab013c0cb01512bbbdbcba",
           "ffi": {
             "bridge_sha256": "9b54d7c2b1e06735a2d74e6216117eebfaa7b537f5a843654b32cd4cad9c4f6e",
             "excluded_non_android": [
@@ -2251,7 +2288,7 @@
                   "libc.so"
                 ],
                 "no_rpath": true,
-                "sha256": "76fd6ff5a00d90047e5f0b040f0697c2f5e3611126f8aeac21cb196080c7a8a3"
+                "sha256": "6f18ee03296c78cd5cc872835cfdb2dbdf0c1b41b3ab013c0cb01512bbbdbcba"
               }
             },
             "missing_libraries": [],
@@ -2325,8 +2362,8 @@
         },
         "generated_outputs": {
           "src/version.rs": {
-            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 00:06\";\n",
-            "sha256": "5f90b109843516d8212be0b2b43c3ef26495b52a679ff72e17a6c9bc7b497499"
+            "content": "pub const VERSION: &str = \"1.4.9\";\n#[allow(dead_code)]\npub const BUILD_DATE: &str = \"2026-10-04 14:36\";\n",
+            "sha256": "2c5ee50514ea14ece00b09f252551b249e8da328581f481a6f84ec0fcba042b7"
           }
         },
         "libraries": {
@@ -2341,22 +2378,23 @@
             "sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256"
           },
           "librustdesk.so": {
-            "bytes": 37565024,
+            "bytes": 37579424,
             "elf": {
               "bits": 64,
               "endianness": "little",
               "machine": 62,
               "type": "DYN"
             },
-            "sha256": "76fd6ff5a00d90047e5f0b040f0697c2f5e3611126f8aeac21cb196080c7a8a3"
+            "sha256": "6f18ee03296c78cd5cc872835cfdb2dbdf0c1b41b3ab013c0cb01512bbbdbcba"
           }
         },
         "runtime_original_sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746",
         "schema_version": 1,
-        "source_commit": "b53519618457bd3e42e6a2123af4113ecc34a8da",
-        "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+        "source_commit": "270536d818eab6a6d9e418b392f63ca8ebc68d50",
+        "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
         "source_files": {
           ".cargo/config.toml": "a606016dff220811e0a1ed870158b41c6074ffbc4db459f05174ccc1c69ad610",
+          ".github/patches/hbb-common-tcp-diagnostics.patch": "7a24b940dfe680fb94cbb3aeb056d9213cba2ee7c0a698b1bfeec7dc068b573c",
           ".gitmodules": "0cbdb9cb5ecf1b8f977d5ebc91ef9a99fe02c256a12fe58eb32ee2e4ca52b2d6",
           "Cargo.lock": "41bdf1ecbd5d2fe865bad1bc88a9bfb418e2b00d8ea86cd02306dd383113a82e",
           "Cargo.toml": "45128962832c364d2129e24b773d2fc3330a7b4d5825d08767481eebcfe746e1",
@@ -2443,7 +2481,7 @@
           "libs/hbb_common/src/proxy.rs": "2fe3017ea39c5666e255a59e16946c52d1adaac065a566a579f3560db8d65406",
           "libs/hbb_common/src/socket_client.rs": "c86f385b2fd55b501c77923afd2fd390d2b7c7caa1a87bc18ff41794ef56542d",
           "libs/hbb_common/src/stream.rs": "bb541d243e0c7b8c22c82ff0acfd6e2fa0ed792acb57427a1d10852e46392d11",
-          "libs/hbb_common/src/tcp.rs": "9998c8790399f324b446ccabff46c23aba633eaacf6dfe6e114b73cf6a03524a",
+          "libs/hbb_common/src/tcp.rs": "39f48d573ff65304aa73a02dd3fba6238117fb9198e64e604a5779cffdb6167c",
           "libs/hbb_common/src/tls.rs": "d1619594e6db7d039096f34dbff69d508f2ac4d336f3709f439b7533fcfc7388",
           "libs/hbb_common/src/udp.rs": "c7da75a4db64fea07f6dce1ad5a791fb4d791b15dcc41672129b0f6438ad8b2f",
           "libs/hbb_common/src/verifier.rs": "0b1ebb0c6c1d383c572d45e3f09daa4956ea49650647aaa03600a12ac3de621e",
@@ -2679,22 +2717,24 @@
           "scripts/qinban/android-triplets/arm64-android.cmake": "bdfa78181d7df2877e8fdaee8b7d1df8b9e0bfabedd39b5c29ff69c2c944725b",
           "scripts/qinban/android-triplets/x64-android.cmake": "a5359ec43d746edca608922a04bb565f2c878f9f95235aa9a68a0e78395b3309",
           "scripts/qinban/android_native_elf.py": "334105e21fcaa4b21fd181f6f7de07ce6d22915958deef86aba447647b4a2097",
-          "scripts/qinban/android_native_manifest.py": "8ad49e684a34e51249318905bfff3ae2f0ab7f8e71f337066e3a8f22eff42bc0",
-          "scripts/qinban/build_android_native.py": "3f7767dcc3dc42dd36f5765166768870829a4c804dae5412ba729f6cea113c48",
+          "scripts/qinban/android_native_manifest.py": "b0b289b7f432b686de71c98714231e727cafae9485dace16cc0855c2db19ce5e",
+          "scripts/qinban/apply_native_patches.py": "e310eaa99ecec03c55108fe46dee1e3d98c148aff6084fb50b4c0ced4f01b637",
+          "scripts/qinban/build_android_native.py": "e4fe8353ff59ce7021b15aca00b77b51b2d80d848f504f55be66d3321c702649",
           "src/auth_2fa.rs": "34d68a2c71280d83782e1c1124aa99cbd9f4db557b9951be2cb17a29fcdff80b",
           "src/bridge_generated.io.rs": "e342987bf0da4b4428e8f93cd670de9b8c335c017a680983730f3908aa73b5b0",
           "src/bridge_generated.rs": "2ba8eac8c22b8c94d0b4f49350751103ac8f84391a19c62463f7ba58da839ff8",
-          "src/client.rs": "ea1c553b911ba379b8642ad7f4037d658d524ab9bbe3fa4ec82e7f69c264e58a",
+          "src/client.rs": "aa77e0b71a4ec807df8f33d1e3e1315ffe6c4c206f5631a09fad80f2a0ad7a36",
           "src/client/file_trait.rs": "5e02f030a322a54b1e9f0fd0690af48c49a663085cf8c07781a4e164e39dfa18",
           "src/client/helper.rs": "28f47a438f7895726ad0b754674cacca93cb72f1146cbb4d62f9c4343a708722",
-          "src/client/io_loop.rs": "e0027d93e2bdd14d91d7a8eadd90508ff5efb34c542ce9798ef21749b81b9721",
+          "src/client/io_loop.rs": "d1eaaa180c8681cfbf7fdc6527c1fa7739c927d8f0405db4ed043cfdb6d87136",
           "src/client/screenshot.rs": "236fcff19353e18d1203e97e56f558b9e5d2967c9bd28a2fadeb73afef21f430",
           "src/clipboard.rs": "a700383867031ce2d0d0108a81738f9ae932f34fe838af3995ddc04d39419a68",
           "src/clipboard_file.rs": "63324dd23aa28b40723f00510e17c35acc97fcde4104c16756c41ae292684b26",
-          "src/common.rs": "1712b19afab3ba72c67090f309da2bb208d58def1f865d610d3d009245407685",
+          "src/common.rs": "36446706016adf851e8c4dfc9e4ef9f21447c35cdbf086a7fa904c6b035c2fe6",
+          "src/connection_transport.rs": "d084e3b3fc737d39ba924528f257440cb75e3e80f96d799b7d17803f3ba59e6f",
           "src/core_main.rs": "98afa31352743b961c7f75a2da36f06772dba02ccf38400192eeb1629d713e08",
           "src/custom_server.rs": "a5b28d5b79512a3524b38fa34276bd1cb9349f0194518b86e7cbb4bb800d0b7d",
-          "src/flutter.rs": "a201ce73f27c2075ba1d33d9e7daf8987db48427c273519949df03a5f7404e27",
+          "src/flutter.rs": "0d156aebfad4e6d42a0b345abcf614c8d8d4c2196738f54ca5e488974157d23f",
           "src/flutter_ffi.rs": "2a71985e00be86bee0b409658cf4757f611b835f199163a7e441979a9ca3ac6f",
           "src/hbbs_http.rs": "855492afae03654e2d9e440c4f49b253ac77e21a92aec150dedbb0dbaa5f3c26",
           "src/hbbs_http/account.rs": "59fbf89654f108f76423588e1e42ffe7ee75834787631852acdefe34f7df2e40",
@@ -2761,7 +2801,7 @@
           "src/lang/tw.rs": "4bfb83105daa57929e4469014d98a49387b48d6c829dd0cfff8c34f05e3b4ffc",
           "src/lang/uk.rs": "7f7a2caef157201f728703125d7406c585d69ee19ca1675f34be7c20d150343e",
           "src/lang/vi.rs": "5cbe35cbf5aa3ec2951424abf242cec52231f81e2d6f284ec067d6d9167f10b6",
-          "src/lib.rs": "9a82dd1a219057cfdc30cbce6bdd762b56839b9a72ada39d1efbf2893b434af0",
+          "src/lib.rs": "a941470923bf5740deadbeb32d5a8e39da9f61bd5c1814f22ea85079d72f4ddc",
           "src/main.rs": "79264725d81ad6175e136d532c610aff0759acebf343dddb7bf3cec4a282fec7",
           "src/naming.rs": "3470a4114b04a3dc85a47f7f932b2a7f6cb5760e0546548fff59d701f61561e8",
           "src/platform/delegate.rs": "1a6f68fc2923fcc78ac89d08f0e672204e5ffe793f19b7b9c7f9edeaa141d83b",
@@ -2805,7 +2845,7 @@
           "src/privacy_mode/win_topmost_window.rs": "6d2baf22b83084896c7ce04af2e6c244b5b5bfd59959c2a6a2ec8da2f2c5570c",
           "src/privacy_mode/win_virtual_display.rs": "60d75106660093dfce895129a4a9a9fdbe034097540fb726d9539182f040f7bf",
           "src/registration_transport.rs": "c2a4ee25a42bf20b23cec30a70137cca69f50c8950ea7e7dc979310c5e47e8ba",
-          "src/rendezvous_mediator.rs": "e6c60d4016a554716d1c9f8a9680116f3e0d319b995fb2822c51517c89f09555",
+          "src/rendezvous_mediator.rs": "ec7b75f7418ac39fa7ed4ddfe7ce69e2f3551421f9adc1a8fe3a26d6bd38c1cb",
           "src/server.rs": "32c5485c59ef2d5d1be149ffbce0a4c7176cb1a7dbed55ac763ecfed93325176",
           "src/server/audio_service.rs": "fc457ae565a10cda97ff396979850ccc59af6f763306984e88458e2f5ef63c8f",
           "src/server/clipboard_service.rs": "1988f582a34e2fcdfd1e3356e56d31ad96f67dfa00ed48432771ea30eb7116f0",
@@ -2854,7 +2894,7 @@
           "src/ui/remote.tis": "3e14634e696492c1e2eec4b70d376ea54a2f646eef28cebf2c9e32853d63a9a1",
           "src/ui_cm_interface.rs": "80f5044f3fd13c84d44224abbe6c48de5b1cad2396ec2e29eddf471ab11969b3",
           "src/ui_interface.rs": "ed889dedd931ba54b7225dfb8f20308dfc05b7d490c9eddb1aac2f91ae74b22e",
-          "src/ui_session_interface.rs": "ec86b5f1d97505787a3d815e5af5f7573870f9f930fa6e056446afd68e1f0d8d",
+          "src/ui_session_interface.rs": "a07a2e9cf7d601fe2a97d743e05363b2f72a90eedf647776a1b56673e9d1e64d",
           "src/updater.rs": "a1153de2a76c95218b7b6ebe1230ed453f05cce11e6b26c2de820d3f7addf585",
           "src/virtual_display_manager.rs": "318efa9016953629dc1f49807bef295e2e88520a65f6ace6137dbd529615981f",
           "src/whiteboard/client.rs": "a8630179efa1fac190a6f4ab84338e12fad35b00bab3a3310653929b6af9b262",
@@ -2896,15 +2936,15 @@
     "release_apk": {
       "schema_version": 1,
       "passed": true,
-      "apk_sha256": "561fb8aa2dc0902bee6dbc99a9ad98b867cb8e9b9df623581f788cfcc7c1634c",
-      "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+      "apk_sha256": "633372962f962e6224498a70fbf8ad911313289141ffedf6f5a2f64f0886af63",
+      "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
       "libraries": {
         "arm64-v8a": {
-          "librustdesk.so": "bbdb652ce560043f5e8b60b0834a3cab8c9a98cd71f7cd591d91c108bc016d0d",
+          "librustdesk.so": "97985b869f36792df24afa359773c6961a5ec0a006545a51ce28010e1bea1c87",
           "libc++_shared.so": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c"
         },
         "armeabi-v7a": {
-          "librustdesk.so": "755a55541263b6a7845fb7575c0f4fc9cbe1238394166c10b1c9442ddc5edb7e",
+          "librustdesk.so": "2e40018b13a4f2caafb5a7d667adfd6ab2a3e501f34596b0018791a07126da19",
           "libc++_shared.so": "e7e20f6e0f3f181e853cea50373ecee2ccfe95c668dce72d0999b2469c92d0e1"
         }
       },
@@ -2913,11 +2953,11 @@
     "validation_apk": {
       "schema_version": 1,
       "passed": true,
-      "apk_sha256": "6244c942d48199b4134fcee14667eca4e6b0ea6f6ddca39750961c03dfba5b9d",
-      "source_digest": "1766667eb1c83630679bc50c69d04de2c00a29db7ea16e9988c646651f34e1b6",
+      "apk_sha256": "194ebe60a77f61fb4fd76eb9025282431fc62c5f7f5d428021a534ed2d6f372e",
+      "source_digest": "caa8c3bbed071b65c70c6af65dadf1e018a99613df84ab47a21957f567c4adf7",
       "libraries": {
         "x86_64": {
-          "librustdesk.so": "76fd6ff5a00d90047e5f0b040f0697c2f5e3611126f8aeac21cb196080c7a8a3",
+          "librustdesk.so": "6f18ee03296c78cd5cc872835cfdb2dbdf0c1b41b3ab013c0cb01512bbbdbcba",
           "libc++_shared.so": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256"
         }
       },
