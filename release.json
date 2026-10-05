@@ -24,8 +24,8 @@
     "status": "testflight",
     "appStoreUrl": null,
     "testFlightUrl": "https://testflight.apple.com/join/4sw7UNJe",
-    "version": "0.1.2",
-    "buildNumber": 14
+    "version": "0.1.4",
+    "buildNumber": 21
   },
   "buildNumber": 25,
   "channel": "preview"
